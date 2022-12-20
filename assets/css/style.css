@@ -1,0 +1,114 @@
+:root {
+    --green: #18453B;
+    --light-green: #588a7f;
+    --white: #fff;
+    --table: #d4dcda;
+}
+
+body {
+    padding: 0.5rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+table {
+    border: 2px solid var(--green);
+    width: 200px;
+    margin-inline: auto;
+    font-weight: 500;
+}
+
+td {
+    padding: .25rem;
+}
+
+th {
+    background-color: var(--green);
+    color: var(--white);
+    font-size: 1.125rem;
+}
+
+.btn {
+    border-radius: 3rem;
+    padding: 15px 20px;
+}
+
+#header {
+    display: flex;justify-content: space-between;
+    padding: 1rem;
+}
+
+#intro, #quiz-form, #end-quiz, #high-scores {
+    text-align: center;
+    margin-inline: auto;
+    max-width: 700px;
+}
+
+#quiz-form, #end-quiz, #high-scores {
+    display: none;
+}
+
+#result {
+    margin-top: 1.5rem;
+    color: #555;
+    font-size: 1.5rem;
+}
+
+#high-score-list {
+    text-align: left;
+}
+
+#high-score-list tr:nth-child(even) {
+        background-color: var(--table);
+      }
+
+#high-scores {
+    margin-top: 3rem;
+}
+
+#timer {
+    font-weight: 700;
+    font-size: 1.5rem;
+    background-color: var(--green);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+#try-again {
+    margin-top: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--green);
+    border-color: var(--green);
+    border-width: 0px;
+}
+
+.btn-primary:hover {
+    background-color: var(--light-green);
+    border-color: var(--green);
+    border-width: 0px;
+    box-shadow: 0 0 0 0.25rem var(--green);
+}
+
+.btn-primary:focus {
+    background-color: var(--table);
+    border-color: var(--green);
+    box-shadow: 0 0 0 0.25rem var(--green);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.choice {
+    flex-grow: 1;
+}
