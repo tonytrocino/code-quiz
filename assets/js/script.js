@@ -31,28 +31,25 @@ var i = 0;
 var score = 0;
 var interval = "";
 
-/* Timer 
- * * Displays a countdown timer based on 'counter' global variable
- */
+// Timer 
+// Displays a countdown timer based on 'counter' global variable
 function timer() {
     interval = setInterval(function() {
         counter--;
         // Display 'counter' wherever you want to display it.
         if (counter <= 0) {
             clearInterval(interval);
-            $('#time').html("Times Up!");
+            $('#timer').html("Times Up!");
             endQuiz();
             return;
         } else {
-            $('#time').text(counter);
+            $('#timer').text("Time: " + counter);
         }
     }, 1000);
 }
 
-/* showQuestion
- * * Renders question from an array of objects
- * @number - Which question to show
- */
+// Renders question from an array of objects
+// @number - Which question to show
 function showQuestion(number) {
     $("#quiz-form").show();
     $("#question").html(quiz[i].question);
@@ -62,9 +59,11 @@ function showQuestion(number) {
     $("#button3").html("4. " + quiz[i].choice[3]);
 }
 
+// JQuery Block
 $(function() {
     let startButton = $("#start-button");
     startButton.on("click", function() {
+
         // Start timer
         timer();
 
@@ -84,10 +83,11 @@ $(function() {
             $("#result").html("Wrong!");
             counter -= 10;
         }
+
+        // After click take focus off button
         $(this).blur();
         i++;
         if (i >= quiz.length) {
-            // End quiz
             clearInterval(interval);
             endQuiz();
         } else {
@@ -96,6 +96,7 @@ $(function() {
         return false;
     });
 
+    // Stores scores, hides the quiz block and displays the high score list
     $("#store-initials").on("click", function(){
         let initials = $("#initials").val();
         storeScore(initials, score);
@@ -103,11 +104,13 @@ $(function() {
         showScores();
     });
 
+    // Reloads page on click
     $("#try-again").on("click", function() {
         location.reload();
     })
 });
 
+// Housekeeping for end of quiz
 function endQuiz() {
     $("#quiz-form").hide();
     $("#end-quiz").show();
