@@ -177,4 +177,8 @@ header h1 {
     #header>* {
         width: 50%;
     }
+
+    #timer {
+        width: 170px;
+    }
   }
