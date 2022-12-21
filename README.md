@@ -8,4 +8,4 @@
 - Quiz is ended after the last question is answered or timer runs out
 - User is able to enter their initials and store their score in Local Storage and will be able to view it after refreshing the page
 
-![Screenshot of Code Quiz](./assets/img/code-quiz_screenshot.png)
+![Screenshot of Code Quiz](./assets/img/code-quiz-screenshot.png)
